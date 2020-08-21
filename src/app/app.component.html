@@ -1,5 +1,12 @@
 <h1>componente app</h1>
 
-<app-alta></app-alta>
+<app-alta (outputInfo)="capturarInfo($event)"></app-alta>
 
-<app-usuario></app-usuario>
+
+
+
+<app-usuario [nombreUsuario]="nombreUsuarioApp" 
+              [apellidoUsuario]="apellidoUsuarioApp" 
+              [dniUsuario]="dniUsuarioApp"
+              [edadUsuario]="edadUsuarioApp"></app-usuario>
+

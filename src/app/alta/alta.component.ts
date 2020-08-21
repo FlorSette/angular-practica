@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-alta',
@@ -7,23 +7,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AltaComponent implements OnInit {
 
+  @Output() outputInfo: EventEmitter<any> = new EventEmitter<any>();
+
   nombre: string;
   apellido: string;
   dni: number;
   edad: number;
 
+
   constructor() { }
-  
 
-  
 
-  ngOnInit(): void  {
-    
+
+
+  ngOnInit(): void {
+
   }
-  ingresar(): void{
-    console.log(this.nombre + this.apellido + this.dni + this.edad)
+  ingresar() {
+    this.outputInfo.emit(
+      {
+        nombre: this.nombre,
+        apellido: this.apellido,
+        dni: this.dni,
+        edad: this.edad
+
+      }
+    );
   }
-  
+
 }
 
 
