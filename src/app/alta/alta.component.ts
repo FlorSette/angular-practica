@@ -14,15 +14,11 @@ export class AltaComponent implements OnInit {
   dni: number;
   edad: number;
 
-
   constructor() { }
 
-
-
-
-  ngOnInit(): void {
-
+  ngOnInit() {
   }
+  
   ingresar() {
     this.outputInfo.emit(
       {

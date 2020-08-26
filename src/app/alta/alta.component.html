@@ -1,11 +1,17 @@
-<h4>componente alta</h4>
-<div>
-    nombre: <input type="text" [(ngModel)]="nombre"> apellido <input type="text" [(ngModel)]="apellido"> dni
-    <input type="number" [(ngModel)]="dni"> edad
-    <input type="number" [(ngModel)]="edad">
+<h1>Componente alta</h1>
+
+<div style="border: solid 1px;">
+
+    Nombre: <input type="text" [(ngModel)]="nombre">
+    <br>
+    Apellido: <input type="text" [(ngModel)]="apellido">
+    <br>
+    DNI: <input type="number" [(ngModel)]="dni"> 
+    <br>
+    Edad: <input type="number" [(ngModel)]="edad">
+
 </div>
 
 <div>
-    <button (click)="ingresar()">ingresar</button>
-
+    <button (click)="ingresar()">Ingresar</button>
 </div>

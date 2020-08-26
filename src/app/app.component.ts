@@ -1,4 +1,4 @@
-import { Component,  } from '@angular/core';
+import { Component, } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,20 +8,20 @@ import { Component,  } from '@angular/core';
 export class AppComponent {
   title = 'app-practica';
 
-   nombreUsuarioApp: string;
-   apellidoUsuarioApp: string;
-   dniUsuarioApp: number;
+  nombreUsuarioApp: string;
+  apellidoUsuarioApp: string;
+  dniUsuarioApp: number;
   edadUsuarioApp: number;
 
-  capturarInfo(event){
+  capturarInfo(event) {
     this.nombreUsuarioApp = event.nombre;
     this.apellidoUsuarioApp = event.apellido;
     this.dniUsuarioApp = event.dni;
     this.edadUsuarioApp = event.edad;
-  
+
     console.log(event);
-    
-    }
+
+  }
 
 }
 
