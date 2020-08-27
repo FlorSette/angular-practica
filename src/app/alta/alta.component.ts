@@ -13,6 +13,7 @@ export class AltaComponent implements OnInit {
   apellido: string;
   dni: number;
   edad: number;
+  gender: string;
 
   constructor() { }
 
@@ -25,7 +26,8 @@ export class AltaComponent implements OnInit {
         nombre: this.nombre,
         apellido: this.apellido,
         dni: this.dni,
-        edad: this.edad
+        edad: this.edad,
+        gender: this.gender
 
       }
     );

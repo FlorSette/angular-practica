@@ -12,12 +12,14 @@ export class AppComponent {
   apellidoUsuarioApp: string;
   dniUsuarioApp: number;
   edadUsuarioApp: number;
+  genderUsuarioApp: string;
 
   capturarInfo(event) {
     this.nombreUsuarioApp = event.nombre;
     this.apellidoUsuarioApp = event.apellido;
     this.dniUsuarioApp = event.dni;
     this.edadUsuarioApp = event.edad;
+    this.genderUsuarioApp = event.gender;
 
     console.log(event);
 

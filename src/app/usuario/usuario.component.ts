@@ -11,6 +11,7 @@ export class UsuarioComponent implements OnInit {
   @Input() apellidoUsuario:string;
   @Input() dniUsuario:number;
   @Input() edadUsuario:number;
+  @Input() genderUsuario:string;
 
   constructor() { }
 
