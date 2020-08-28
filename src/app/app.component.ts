@@ -18,40 +18,55 @@ export class AppComponent {
   num2: number;
   operacion: string;
   resultado: number;
+  resultados = [] 
 
-  calcular() {
-    if (this.operacion === "+") {
-      this.resultado = this.num1 + this.num2
-    } else {
-      if (this.operacion === "-") {
-        this.resultado = this.num1 - this.num2
-      } else {
-        if (this.operacion === "*" || this.operacion === "x" || this.operacion === "X") {
-          this.resultado = this.num1 * this.num2
-        } else {
-          if (this.operacion === "/") {
-            this.resultado = this.num1 / this.num2
-          }
-        }
-      }
-    }
-  }
+  
+
+  // calcular() {
+  //   if (this.operacion === "+") {
+  //     this.resultado = this.num1 + this.num2
+  //   } else {
+  //     if (this.operacion === "-") {
+  //       this.resultado = this.num1 - this.num2
+  //     } else {
+  //       if (this.operacion === "*" || this.operacion === "x" || this.operacion === "X") {
+  //         this.resultado = this.num1 * this.num2
+  //       } else {
+  //         if (this.operacion === "/") {
+  //           this.resultado = this.num1 / this.num2
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   sum(){
     this.resultado = this.num1 + this.num2;
+    this.resultados.push(this.resultado)
   }
 
   rest(){
     this.resultado = this.num1 - this.num2;
+    this.resultados.push(this.resultado)
   }
 
   divi(){
     this.resultado = this.num1 / this.num2;
+    this.resultados.push(this.resultado)
   }
 
   multi(){
     this.resultado = this.num1 * this.num2;
+    this.resultados.push(this.resultado)
   }
+
+  mostrarResultados(){
+
+
+    console.log(this.resultados);
+    
+  }
+
 
   capturarInfo(event) {
     this.nombreUsuarioApp = event.nombre;
