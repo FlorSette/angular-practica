@@ -14,6 +14,45 @@ export class AppComponent {
   edadUsuarioApp: number;
   genderUsuarioApp: string;
 
+  num1: number;
+  num2: number;
+  operacion: string;
+  resultado: number;
+
+  calcular() {
+    if (this.operacion === "+") {
+      this.resultado = this.num1 + this.num2
+    } else {
+      if (this.operacion === "-") {
+        this.resultado = this.num1 - this.num2
+      } else {
+        if (this.operacion === "*" || this.operacion === "x" || this.operacion === "X") {
+          this.resultado = this.num1 * this.num2
+        } else {
+          if (this.operacion === "/") {
+            this.resultado = this.num1 / this.num2
+          }
+        }
+      }
+    }
+  }
+
+  sum(){
+    this.resultado = this.num1 + this.num2;
+  }
+
+  rest(){
+    this.resultado = this.num1 - this.num2;
+  }
+
+  divi(){
+    this.resultado = this.num1 / this.num2;
+  }
+
+  multi(){
+    this.resultado = this.num1 * this.num2;
+  }
+
   capturarInfo(event) {
     this.nombreUsuarioApp = event.nombre;
     this.apellidoUsuarioApp = event.apellido;

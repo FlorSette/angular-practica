@@ -1,11 +1,6 @@
 <h1>COMPONENTE APP</h1>
-
 <h1>APP de Flor</h1>
-
 <app-alta (outputInfo)="capturarInfo($event)"></app-alta>
-
-
-
 
 <app-usuario 
 
@@ -16,3 +11,31 @@
 [genderUsuario]="genderUsuarioApp">
 
 </app-usuario>
+
+<h2>
+  calculadora 1
+</h2>
+
+num1: <input type="number" [(ngModel)]="num1">
+num2: <input type="number" [(ngModel)]="num2">
+operacion: <input type="text" [(ngModel)]="operacion">
+resultado: <input type="number" [(ngModel)]="resultado">
+<div>
+    <button (click)="calcular()">calcular</button>
+</div>
+
+
+<h2>
+    calculadora 2
+  </h2>
+  
+  num1: <input type="number" [(ngModel)]="num1">
+  num2: <input type="number" [(ngModel)]="num2">
+  resultado: <input type="number" [(ngModel)]="resultado">
+
+  <div>
+    <button (click)="sum()">+</button>
+    <button (click)="rest()">-</button>
+    <button (click)="divi()">/</button>
+    <button (click)="multi()">*</button>
+</div>
